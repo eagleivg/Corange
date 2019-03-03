@@ -1,10 +1,9 @@
-project(noise LANGUAGES C)
+project(parallax LANGUAGES C)
 
-file(COPY "noise.fs" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY "noise.mat" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY "noise.vs" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "assets" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_SOURCE_DIR}/../../include
     )
 
@@ -14,4 +13,3 @@ add_executable(${PROJECT_NAME} ${PROJ_SRC})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
 target_link_libraries(${PROJECT_NAME} corange GL SDL2 SDL2_net SDL2_mixer m)
-

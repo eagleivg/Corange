@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.5)
 project(corange LANGUAGES C)
 
 set(CMAKE_SKIP_BUILD_RPATH TRUE)
@@ -12,6 +12,8 @@ set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${SANITIZE_FLAGS}")
 set (CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} ${SANITIZE_FLAGS}")
 
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/include )
+
+file(COPY "assets_core" DESTINATION ${CMAKE_BINARY_DIR})
 
 file(GLOB SRC src/*.c)
 file(GLOB ASSETS src/assets/*.c)

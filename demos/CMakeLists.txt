@@ -1,5 +1,6 @@
 add_subdirectory( metaballs )
 add_subdirectory( noise )
+add_subdirectory( parallax )
 add_subdirectory( platformer )
 add_subdirectory( rendering )
 add_subdirectory( scotland)

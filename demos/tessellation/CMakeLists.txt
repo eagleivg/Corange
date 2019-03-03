@@ -1,5 +1,12 @@
 project(tessellation LANGUAGES C)
 
+file(COPY "tessellation.fs" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "tessellation.gs" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "tessellation.mat" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "tessellation.tcs" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "tessellation.tes" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "tessellation.vs" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/../../include
     )

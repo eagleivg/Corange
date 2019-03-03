@@ -1,5 +1,8 @@
 project(metaballs LANGUAGES C)
 
+file(COPY "assets" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "shaders" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_SOURCE_DIR}/../../include

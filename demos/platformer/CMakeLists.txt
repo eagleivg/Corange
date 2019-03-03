@@ -1,5 +1,10 @@
 project(platformer LANGUAGES C)
 
+file(COPY "backgrounds" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "levels" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "sounds" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "tiles" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_SOURCE_DIR}/../../include
